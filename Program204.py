@@ -15,11 +15,13 @@ class Employee:
 
 
 
-f = open(sys.argv[1], "r+")
+f = open(sys.argv[1], "r")
+string_list = f.readlines()
+f.close()
 L=[]
 search_name=input("Enter the name to search")
 salary_update=int(input("Enter the Salary"))
-for line in f:
+for line in string_list:
     s=line.split(" ")
     print(s)
     name=s[0]
@@ -32,6 +34,14 @@ for line in f:
         print(line.index(salary))
         salary=salary_update
         e = Employee(name, age, salary)
-        f.seek(pos)
-        f.write(str(e.salary))
-f.close()
+        #f.seek(pos)
+        s[0]=name
+        s[1]=age
+        s[2]=salary
+        L.append(s)
+    else:
+        L.append(s)
+
+f1 = open(sys.argv[1], "w")
+f1.write(str(L))
+f1.close()
