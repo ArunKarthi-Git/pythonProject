@@ -1,4 +1,4 @@
-from  Program219 import read
+from  Program219 import display
 if __name__=='__main__':
     def read(L):
         L.append(input("Enter the Character"))
@@ -23,4 +23,4 @@ if __name__=='__main__':
     n=int(input("Enter a No. character to copy"))
     m=int(input("Enter a No. from which character to copy"))
     copy(L,R,n,m)
-    print(R)
+    display(R)

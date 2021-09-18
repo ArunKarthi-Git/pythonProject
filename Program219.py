@@ -1,2 +1,2 @@
-def read(L):
+def display(L):
     print(L)
