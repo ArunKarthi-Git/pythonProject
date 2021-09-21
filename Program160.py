@@ -38,5 +38,5 @@ if __name__=='__main__':
                 L2.append(L[k1])
                 k1+=1
                 break
-print(L2)
+print("The deleted pattern is",L2)
 
